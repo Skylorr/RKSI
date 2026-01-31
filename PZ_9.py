@@ -16,6 +16,6 @@ author = 'Маяковский'
 
 print(f'Книги {author} можно купить в магазинах:')
 
-for shop, authors in shops.items():
+for shop, authors in shops:
     if author in authors:
         print(shop)
