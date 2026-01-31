@@ -5,15 +5,17 @@ dom_knigi = {'Толстой', 'Грибоедов', 'Чехов', 'Пушкин
 buk_market = {'Пушкин', 'Достоевский', 'Маяковский'}
 galereya = {'Чехов', 'Тютчев', 'Пушкин'}
 
+shops = {
+    'Магистр': magistr,
+    'ДомКниги': dom_knigi,
+    'БукМаркет': buk_market,
+    'Галерея': galereya
+}
+
 author = 'Маяковский'
 
-print('Книги Маяковского можно купить в магазинах:')
+print(f'Книги {author} можно купить в магазинах:')
 
-if author in magistr:
-    print('Магистр')
-if author in dom_knigi:
-    print('ДомКниги')
-if author in buk_market:
-    print('БукМаркет')
-if author in galereya:
-    print('Галерея')
+for shop, authors in shops.items():
+    if author in authors:
+        print(shop)
