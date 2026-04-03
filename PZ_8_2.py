@@ -9,7 +9,7 @@ def half_sums(d):
     sum_second = sum(values[mid:])
     return sum_first, sum_second
 
-data = {'a': 10,'b': 20,'c': 30,'d': 40}
+data = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
 
 s1, s2 = half_sums(data)
 
