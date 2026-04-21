@@ -2,20 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практическое занятие №7</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="main-title">Практическое занятие №7: Работа с HTML формами</h1>
+    <h1 class="main-title">Практическое занятие №7<br>Работа с HTML формами</h1>
 
     <section>
-        <h2>На input и textarea</h2>
+        <h2 class="blue-link">На input и textarea</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие HTML теги: <b>input</b>, <b>textarea</b> и атрибуты <b>resize, placeholder, disabled</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
         <div class="task-container">
             <input type="text" placeholder="Плейсхолдер">
             <input type="text" value="Value">
-            <input type="text" value="disabled" disabled>
+            <input type="text" value="disabled" disabled class="bg-disabled">
             <input type="password" value="123456">
             <textarea placeholder="Введите текст"></textarea>
             <input type="button" value="Кнопка через тег input">
@@ -24,7 +25,49 @@
     </section>
 
     <section>
-        <h2>На select</h2>
+        <h2 class="blue-link">На input с label</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие HTML теги: <b>label</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
+        <div class="task-container">
+            <div class="label-row">
+                <input type="text" placeholder="Плейсхолдер" id="inp1">
+                <label for="inp1">Это метка для инпута - нажмите на меня - и инпут получит фокус!</label>
+            </div>
+            <button type="submit">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="blue-link">На checkbox и radio</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие элементы HTML форм: <b>checkbox</b>, <b>radio</b> и атрибуты <b>checked</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
+        <div class="task-container">
+            <p>
+                <input type="checkbox" id="c1">
+                <label for="c1" class="red-border">Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</label>
+            </p>
+            <p>
+                <input type="checkbox" id="c2" checked>
+                <label for="c2" class="red-border">Я отмечен по умолчанию!</label>
+            </p>
+            <p>
+                <input type="checkbox" id="c3" checked disabled>
+                <label for="c3" class="red-border">Я disabled!</label>
+            </p>
+
+            <div class="radio-group-box">
+                <p>Это группа радиокнопок - только одна из них может быть отмечена!</p>
+                <input type="radio" name="r_group" id="r1"> <label for="r1" class="red-border">Это метка для радио</label><br><br>
+                <input type="radio" name="r_group" id="r2"> <label for="r2" class="red-border">Это метка для радио</label>
+            </div>
+            <button type="submit">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="blue-link">На select</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие HTML теги: <b>select</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
         <div class="task-container flex-row">
             <select>
                 <option>Нью Йорк</option>
@@ -47,73 +90,44 @@
             </select>
             <button type="submit">Отправить на сервер</button>
         </div>
-    </section>
 
-    <section>
-        <h2>На file</h2>
+        <h2 class="blue-link">На file</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие HTML теги: <b>input type="file"</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
         <div class="task-container">
-            <input type="file" class="inline">
+            <input type="file" class="inline-file">
             <button type="submit">Отправить на сервер</button>
         </div>
     </section>
 
     <section>
-        <h2>На fieldset и legend</h2>
+        <h2 class="blue-link">На fieldset и legend</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие HTML теги: <b>fieldset, legend</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
         <div class="task-container">
             <fieldset>
                 <legend>Выберите кнопочку</legend>
-                <input type="radio" name="group1">
-                <input type="radio" name="group1">
-                <input type="radio" name="group1">
-                <input type="text" placeholder="Ваше имя..." class="inline">
+                <input type="radio" name="f1"> <input type="radio" name="f1"> <input type="radio" name="f1">
+                <input type="text" placeholder="Ваше имя..." class="inline-text">
             </fieldset>
 
             <fieldset>
                 <legend>Выберите еще кнопочку</legend>
-                <input type="radio" name="group2">
-                <input type="radio" name="group2">
-                <input type="radio" name="group2">
-                <input type="radio" name="group2">
-                <input type="radio" name="group2">
+                <input type="radio" name="f2"> <input type="radio" name="f2"> <input type="radio" name="f2"> <input type="radio" name="f2"> <input type="radio" name="f2">
             </fieldset>
-            <button type="submit" class="mt-10">Отправить на сервер</button>
+            <button type="submit" class="mt-15">Отправить на сервер</button>
         </div>
     </section>
 
     <section>
-        <h2>На checkbox и radio</h2>
-        <div class="task-container">
-            <p>
-                <input type="checkbox" id="c1">
-                <label for="c1" class="border-label">Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</label>
-            </p>
-            <p>
-                <input type="checkbox" id="c2" checked>
-                <label for="c2" class="border-label">Я отмечен по умолчанию!</label>
-            </p>
-            <p>
-                <input type="checkbox" id="c3" checked disabled>
-                <label for="c3" class="border-label">Я disabled!</label>
-            </p>
-
-            <div class="radio-box">
-                <p>Это группа радиокнопок - только одна из них может быть отмечена!</p>
-                <input type="radio" name="r_task" id="r1">
-                <label for="r1" class="border-label">Это метка для радио</label><br>
-                <input type="radio" name="r_task" id="r2">
-                <label for="r2" class="border-label">Это метка для радио</label>
-            </div>
-            <button type="submit">Отправить на сервер</button>
-        </div>
-    </section>
-
-    <section>
-        <h2>На resize</h2>
+        <h2 class="blue-link">На resize</h2>
+        <p>Для решения задач данного блока вам понадобятся следующие CSS свойства: <b>resize</b>.</p>
+        <p class="instruction">Повторите страницу по данному по образцу:</p>
         <div class="task-container">
             <textarea class="res-limit" placeholder="Ограничена ширина и высота"></textarea>
-            <textarea class="res-none" placeholder="resize: none"></textarea>
-            <textarea class="res-vert" placeholder="resize: vertical"></textarea>
-            <textarea class="res-hor" placeholder="resize: horizontal"></textarea>
+            <textarea class="res-none" placeholder=""></textarea>
+            <textarea class="res-vert" placeholder=""></textarea>
+            <textarea class="res-hor" placeholder=""></textarea>
         </div>
     </section>
 
