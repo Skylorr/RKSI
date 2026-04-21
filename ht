@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое занятие №7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-title">Практическое занятие №7: Работа с HTML формами</h1>
+
+    <section>
+        <h2>На input и textarea</h2>
+        <div class="task-container">
+            <input type="text" placeholder="Плейсхолдер">
+            <input type="text" value="Value">
+            <input type="text" value="disabled" disabled>
+            <input type="password" value="123456">
+            <textarea placeholder="Введите текст"></textarea>
+            <input type="button" value="Кнопка через тег input">
+            <button type="button">Кнопка через тег button</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>На select</h2>
+        <div class="task-container flex-row">
+            <select>
+                <option>Нью Йорк</option>
+                <option>Москва</option>
+                <option>Киев</option>
+            </select>
+
+            <select size="3" multiple>
+                <option>Москва</option>
+                <option>Киев</option>
+                <option selected>Нью Йорк</option>
+            </select>
+
+            <select size="5" multiple>
+                <option>Минск</option>
+                <option>Москва</option>
+                <option>Киев</option>
+                <option selected>Нью Йорк</option>
+                <option>Варшава</option>
+            </select>
+            <button type="submit">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>На file</h2>
+        <div class="task-container">
+            <input type="file" class="inline">
+            <button type="submit">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>На fieldset и legend</h2>
+        <div class="task-container">
+            <fieldset>
+                <legend>Выберите кнопочку</legend>
+                <input type="radio" name="group1">
+                <input type="radio" name="group1">
+                <input type="radio" name="group1">
+                <input type="text" placeholder="Ваше имя..." class="inline">
+            </fieldset>
+
+            <fieldset>
+                <legend>Выберите еще кнопочку</legend>
+                <input type="radio" name="group2">
+                <input type="radio" name="group2">
+                <input type="radio" name="group2">
+                <input type="radio" name="group2">
+                <input type="radio" name="group2">
+            </fieldset>
+            <button type="submit" class="mt-10">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>На checkbox и radio</h2>
+        <div class="task-container">
+            <p>
+                <input type="checkbox" id="c1">
+                <label for="c1" class="border-label">Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</label>
+            </p>
+            <p>
+                <input type="checkbox" id="c2" checked>
+                <label for="c2" class="border-label">Я отмечен по умолчанию!</label>
+            </p>
+            <p>
+                <input type="checkbox" id="c3" checked disabled>
+                <label for="c3" class="border-label">Я disabled!</label>
+            </p>
+
+            <div class="radio-box">
+                <p>Это группа радиокнопок - только одна из них может быть отмечена!</p>
+                <input type="radio" name="r_task" id="r1">
+                <label for="r1" class="border-label">Это метка для радио</label><br>
+                <input type="radio" name="r_task" id="r2">
+                <label for="r2" class="border-label">Это метка для радио</label>
+            </div>
+            <button type="submit">Отправить на сервер</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>На resize</h2>
+        <div class="task-container">
+            <textarea class="res-limit" placeholder="Ограничена ширина и высота"></textarea>
+            <textarea class="res-none" placeholder="resize: none"></textarea>
+            <textarea class="res-vert" placeholder="resize: vertical"></textarea>
+            <textarea class="res-hor" placeholder="resize: horizontal"></textarea>
+        </div>
+    </section>
+
+</body>
+</html>
