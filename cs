@@ -1,49 +1,39 @@
-/* Общие стили страницы */
+/* Общие настройки */
 body {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: "Times New Roman", serif;
+    padding: 40px;
+    background-color: #fff;
+    line-height: 1.4;
 }
 
 .main-title {
     text-align: center;
-    color: #000;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-h2 {
-    color: blue;
-    font-weight: normal;
+.blue-link {
+    color: #0033cc;
     text-decoration: underline;
-    margin-top: 30px;
+    font-size: 18px;
+    margin-top: 40px;
 }
 
-/* Контейнеры для заданий (пунктирная рамка как в ворде) */
+.instruction {
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+/* Контейнеры для заданий (пунктирная рамка) */
 .task-container {
     border: 1px dotted #000;
-    padding: 15px;
-    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
     width: fit-content;
-    min-width: 500px;
+    min-width: 600px;
 }
 
-/* Позиционирование */
-.flex-row {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.inline {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.mt-10 {
-    margin-top: 10px;
-}
-
-/* Элементы форм */
+/* Стили элементов */
 input, textarea, select {
     display: block;
     margin-bottom: 10px;
@@ -51,38 +41,72 @@ input, textarea, select {
 
 input[type="radio"], input[type="checkbox"] {
     display: inline-block;
-    margin-bottom: 0;
 }
 
-/* Стили из 5-го задания (красные рамки вокруг текста) */
-.border-label {
+.bg-disabled {
+    background-color: #c0c090;
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.flex-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* Красные рамки из задания про чекбоксы */
+.red-border {
     border: 1px solid red;
-    padding: 1px 3px;
-    cursor: pointer;
+    padding: 0 2px;
 }
 
-.radio-box {
-    border: 1px solid #666;
-    padding: 10px;
-    margin-bottom: 10px;
+.radio-group-box {
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 15px 0;
 }
 
-/* Настройки resize (6-е задание) */
+.inline-file, .inline-text {
+    display: inline-block;
+}
+
+fieldset {
+    border: 1px solid #999;
+    margin-bottom: 15px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+/* Настройки RESIZE */
 .res-limit {
     width: 200px;
-    height: 80px;
+    height: 100px;
     max-width: 300px;
     max-height: 150px;
 }
 
 .res-none {
     resize: none;
+    width: 200px;
+    height: 80px;
 }
 
 .res-vert {
     resize: vertical;
+    width: 200px;
+    height: 80px;
 }
 
 .res-hor {
     resize: horizontal;
+    width: 200px;
+    height: 80px;
 }
