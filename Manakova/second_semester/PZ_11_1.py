@@ -4,21 +4,17 @@
 import random
 
 try:
-    n = int(input("Введите количество элементов последовательности (n > 1): "))
+    n = int(input("Введите n: "))
     if n <= 1:
-        raise ValueError("Количество элементов должно быть больше 1.")
+        raise ValueError
         
     initial_sequence = [random.randint(1, 10) for _ in range(n)]
-    print(f"Исходная последовательность: {initial_sequence}")
+    print(f"Исходная: {initial_sequence}")
     
     last_element = initial_sequence[-1]
+    result_sequence = [x * last_element for x in initial_sequence Singly[:-1]] + [last_element]
     
-    result_sequence = [initial_sequence[i] * last_element for i in range(n - 1)] + [last_element]
-    
-    print(f"Последний элемент (n): {last_element}")
-    print(f"Результирующая последовательность: {result_sequence}")
+    print(f"Результат: {result_sequence}")
 
-except ValueError as e:
-    print(f"Ошибка ввода данных: {e}")
-except Exception as e:
-    print(f"Произошла непредвиденная ошибка: {e}")
+except ValueError:
+    print("Ошибка ввода")
