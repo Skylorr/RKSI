@@ -12,7 +12,7 @@ try:
     print(f"Исходная: {initial_sequence}")
     
     last_element = initial_sequence[-1]
-    result_sequence = [x * last_element for x in initial_sequence Singly[:-1]] + [last_element]
+    result_sequence = [x * last_element for x in initial_sequence[:-1]] + [last_element]
     
     print(f"Результат: {result_sequence}")
 
