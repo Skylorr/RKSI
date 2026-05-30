@@ -34,7 +34,7 @@ entries = []
 
 for i, text in enumerate(labels):
     lbl = tk.Label(grid_frame, text=text, anchor="w", font=("Arial", 10))
-    lbl.grid(row=i, column=0, sticky="w", pady=8, pright=10)
+    lbl.grid(row=i, column=0, sticky="w", pady=8, padx=10)
     
     show_char = "*" if text == "Пароль:" else None
     entry = tk.Entry(grid_frame, show=show_char, font=("Arial", 10))
